@@ -1,0 +1,17 @@
+{
+  "name": "artblansh_bot",
+  "version": "1.0.0",
+  "description": "Бот Артбланш",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "AleksM",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "telegraf": "^4.11.2"
+  }
+}
