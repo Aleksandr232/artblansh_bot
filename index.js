@@ -1,6 +1,6 @@
 const { Telegraf, Markup, Composer, } = require("telegraf");
 require("dotenv").config();
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf('5883449236:AAEdXRi-Xp8xoD3eVYPl9RPa2BPP29lx8SM');
 const commBot = require("./const");
 const webPort = 'https://newportfolio-sooty-kappa.vercel.app/'
 
