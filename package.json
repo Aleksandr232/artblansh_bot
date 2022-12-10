@@ -4,7 +4,7 @@
   "description": "Бот Артбланш",
   "main": "index.js",
   "scripts": {
-    "start": "SET BOT_TOKEN = production && node index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "AleksM",
