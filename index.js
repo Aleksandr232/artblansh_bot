@@ -3,9 +3,19 @@ require("dotenv").config();
 const bot = new Telegraf(process.env.BOT_TOKEN);
 const commBot = require("./const");
 const webPort = 'https://newportfolio-sooty-kappa.vercel.app/'
-
+const oneUrl = {source:'img/1.jpg'}
+const twoUrl = {source:'img/2.jpg'}
+const threeUrl = {source:'img/3.jpg'}
 
 bot.start(async (ctx)=>{
+  bot.on('text', async (ctx)=>{
+    await ctx.replyWithHTML('<a>Что будем творить вместе с Art Blansh✨ </a>')
+    return ctx.replyWithMediaGroup([
+      { type: "photo", media: oneUrl, caption: "Цветы" },
+      { type: "photo", media: twoUrl, caption: "Природа" },
+      { type: "photo", media: threeUrl, caption: "Фрукты" },
+    ]);
+})
     await ctx.replyWithHTML(
         `Итак, друзья!✨ У нас теперь есть телеграмм-бот, ура!❤️‍🩹\n
         « Творить- значит выражать то, что есть в тебе» Анри Матисс.\n Привет ${
