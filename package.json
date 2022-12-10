@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "cross-env BOT_TOKEN=development && nodemon index.js"
+    "dev": "nodemon index.js env BOT_TOKEN=development"
   },
   "author": "AleksM",
   "license": "ISC",
