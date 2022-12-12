@@ -11,7 +11,13 @@ const webArt = 'https://artblansh-web.vercel.app/'
 
 bot.start(async (ctx)=>{
   await ctx.reply('Используй в чате символ / и откроются доп.возможности', Markup.keyboard([
-    [Markup.button.webApp('🧮Заказать услги🧮', webArt )]]))
+    [Markup.button.webApp('👩‍🎨Написать👩‍🎨', webArt )]
+   
+  ])
+  .oneTime()
+  .resize()
+  
+  )
   bot.on('text', async (ctx)=>{
     await ctx.replyWithHTML('<a>Что будем творить вместе с Art Blansh✨ </a>')
     return ctx.replyWithMediaGroup([
@@ -34,7 +40,9 @@ bot.start(async (ctx)=>{
       );
 })
 
-bot.hears("Добрый день", (ctx)=>ctx.reply(`Привеству, ${ctx.message.from.first_name ? ctx.message.from.first_name : ""}`))
+
+
+bot.hears("Добрый день", (ctx)=>ctx.reply(`Привествую, ${ctx.message.from.first_name ? ctx.message.from.first_name : ""}`))
 bot.hears("Привет", (ctx)=>ctx.reply(`Привет, ${ctx.message.from.first_name ? ctx.message.from.first_name : ""} на связи Art Blansh✨`))
 
 bot.help((ctx) => ctx.reply(commBot.commands));
@@ -50,6 +58,16 @@ bot.command("coder", async (ctx) => {
     console.error(e);
   }
 });
+
+bot.command('🎨что мы рисуем🎨', (ctx)=>{
+  return ctx.replyWithMediaGroup([
+    { type: "photo", media: oneUrl, caption: "Цветы" },
+    { type: "photo", media: twoUrl, caption: "Природа" },
+    { type: "photo", media: threeUrl, caption: "Фрукты" },
+  ]);
+})
+
+
 
 bot.launch();
 
