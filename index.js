@@ -7,7 +7,11 @@ const oneUrl = {source:'img/1.jpg'}
 const twoUrl = {source:'img/2.jpg'}
 const threeUrl = {source:'img/3.jpg'}
 
+const webArt = ''
+
 bot.start(async (ctx)=>{
+  await ctx.reply('Используй в чате символ / и откроются доп.возможности', Markup.keyboard([
+    [Markup.button.webApp('🧮Заказать услги🧮', webArt )]]))
   bot.on('text', async (ctx)=>{
     await ctx.replyWithHTML('<a>Что будем творить вместе с Art Blansh✨ </a>')
     return ctx.replyWithMediaGroup([
