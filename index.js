@@ -7,7 +7,7 @@ const oneUrl = {source:'img/1.jpg'}
 const twoUrl = {source:'img/2.jpg'}
 const threeUrl = {source:'img/3.jpg'}
 
-const webArt = ''
+const webArt = 'https://artblansh-web.vercel.app/'
 
 bot.start(async (ctx)=>{
   await ctx.reply('Используй в чате символ / и откроются доп.возможности', Markup.keyboard([
